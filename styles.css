@@ -1,0 +1,354 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+    color: #fff;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(images/Netflix-header.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 12px 3%;
+    position: relative;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+.nav-button{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.nav-button button{
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 4px;
+}
+.language-btn{
+    background: transparent;
+    border: 1px solid gray;
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}    
+.down-arrow{
+    width: 0.6rem;
+    height: 0.3rem;
+    margin-left: 10px;
+}
+.globe{
+    width: 1.1rem;
+    margin-right: 5px;
+    filter: invert(1);
+}
+.sign-in{
+    border: 0;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem 0.5rem;
+    background: #db0001;
+    cursor: pointer;
+}
+.sign-in:hover{
+    background-color: #b70404;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left:10%;
+    transform: translate(0,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1{
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+.header-content p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.header-content h3{
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+.email-signup{
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 20px;
+    margin-left: 13.5rem;
+}
+#eml{
+    background: rgba(0, 0, 0, 0.516);
+    border: 1px solid gray;
+    padding: 1.2rem 0.8rem;
+    font-size: 1rem;
+    width: 390px;
+    border-radius: 4px;
+}
+.started{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.2rem 1rem 0.2rem 1.5rem;
+    margin-top: 0px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background: rgb(229, 9, 20);
+    color: #fff;
+    cursor: pointer;
+}
+.next{
+    width: 1.6rem;
+    margin-right: 5px;
+    filter: invert(1);
+}
+.started:hover{
+    background-color: #b70404;
+}
+
+.feature1{
+    padding: 50px 2%;
+    font-size: 22px;
+    border-top: 10px solid rgb(45, 43, 43);
+    border-bottom: 10px solid rgb(45, 43, 43);
+}
+.feature2 , .feature3 , .feature4 {
+    padding: 50px 2%;
+    font-size: 22px;
+    border-bottom: 10px solid rgb(45, 43, 43);
+}
+.row{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 20px;
+}
+.img-col img{
+    display:block;
+    width: 100%;
+    margin: auto;
+}
+.feature1 h2, .feature2 h2, .feature3 h2, .feature4 h2{
+    font-size: 50px;
+    font-weight: 1000;
+    margin-bottom: 20px;
+}
+.feature1 p, .feature2 p, .feature3 p, .feature4 p{
+    font-size: 25px;
+}
+
+.faq{
+    padding: 10px 2%;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 60px;
+    border-bottom: 10px solid #333;
+}
+.faq h2{
+    font-weight: 900;
+    font-size: 48px;
+}
+.accordion{
+    margin: 20px 2px 40px;
+    width: 100%;
+    max-width: 3000px;
+}
+.accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 30px 20px;
+    font-size: 23px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    position: relative;
+}
+label::after{
+    content: '+';
+    font-size: 60px;
+    font-weight: lighter;
+    position: absolute;
+    right: 20px;
+    transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content{
+    background: #303030;
+    font-size: 25px;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(45deg);
+}
+.faq .email-signup{
+   margin-left: 300px;
+   margin-bottom: 60px;
+}
+.faq #eml{
+    background: rgb(18, 17, 17);
+}
+.faq small{
+    font-size: 20px;
+}
+
+.footer{
+    padding: 50px 15% 10px 30px;
+    color: #ffffffa2;
+}
+.footer h2{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 30px;
+}
+.footer .col{
+    flex-basis: 33.33%;
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+.footer .col a{
+    display: block;
+    text-decoration: none;
+    color: #ffffffa2;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 10px 0;
+}
+.footer .language-btn{
+    color: #fff;
+    font-size: 15px;
+    padding: 6px 12px;
+    border-radius: 3px;
+    background: rgb(18, 17, 17);
+}
+.copyright-text{
+    font-size: 14px;
+    margin-top: 20px;
+    margin-bottom: 60px;
+    color: #ffffffa2;
+}
+
+@media only screen and (max-width: 600px){
+    .logo{
+        width: 100px;
+    }
+    .nav-button{
+        gap: 5px;
+    }
+    nav .language-btn{
+        padding:4px 8px
+    }
+    nav .sign-in{
+        padding:4px 8px
+    }
+    .header-content{
+        position: unset;
+        transform: none;
+        padding-top: 80px;
+    }
+    .header-content h1{
+        font-size: 30px;
+    }
+    .header-content p{
+        font-size: 20px;
+    }
+    .header-content h3{
+        font-size: 15px;
+    }
+    .email-signup{
+        margin-left: 1rem;
+    }
+    #eml{
+        padding: 1rem 0.8rem;
+        font-size: 0.8rem;
+        width: 300px;
+    }
+    .started{
+        font-size: 12px;
+        padding: 2px 6px;
+    }
+    .text-col, .img-col{
+        flex-basis: 100%;
+    }
+    .feature1 h2, .feature2 h2, .feature3 h2, .feature4 h2{
+        font-size: 30px;
+    }
+    .feature1 p, .feature2 p, .feature3 p, .feature4 p{
+        font-size: 15px;
+    }
+    .feature2 .row, .feature4 .row{
+        flex-direction: column-reverse;
+        padding: 10px 20px;
+    }
+    .feature1 .row, .feature3 .row{
+        padding: 10px 20px;
+    }
+    .faq h2{
+        font-size: 20px;
+    }
+    .accordion .content{
+        font-size: 14px;
+    }
+    .accordion li label{
+        padding: 10px;
+        font-size: 14px;
+    }
+    label::after{
+        font-size: 22px;
+    }
+    .faq .email-signup{
+        margin-left: 20px;
+    }
+    .faq small{
+        font-size: 15px;
+    }
+    .faq #eml{
+        width: 200px;
+    }
+}
